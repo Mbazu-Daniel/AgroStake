@@ -3,7 +3,7 @@ pragma solidity ^0.8.18;
 
 contract AgroStake {
     address public owner;
-
+// 
     struct AgroInvestment {
         address investorAddress;
         string investCategory;
