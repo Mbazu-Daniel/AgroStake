@@ -48,8 +48,8 @@ contract AgroStake {
         require(msg.sender == owner, "Not the owner");
         _;
     }
-    modifier onlyNonEmptyAddress(address addr) {
-        require(addr != address(0), "Address cannot be empty");
+    modifier onlyNonEmptyAddress(address _userAddress) {
+        require(_userAddress != address(0), "Empty address");
         _;
     }
 
@@ -76,7 +76,7 @@ contract AgroStake {
     function calculateInvestmentInterest(
         uint basisPoints,
         uint amountInWei
-    ) private pure returns (uint) {
+    ) internal pure returns (uint) {
         require(amountInWei > 0, "Invalid amount");
 
         uint totalInterest = (basisPoints * amountInWei) / 10000;
@@ -84,11 +84,7 @@ contract AgroStake {
         return totalInterest;
     }
 
-    function modifyInvestmentDuration(uint numDays, uint basisPoints) external {
-        require(
-            owner == msg.sender,
-            "Only fund Manager can modify Investment Duration"
-        );
+    function modifyInvestmentDuration(uint numDays, uint basisPoints) external onlyOwner {
 
         agroStakePeriod[numDays] = basisPoints;
 
