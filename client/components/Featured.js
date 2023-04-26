@@ -86,7 +86,7 @@ const Featured = () => {
                   />
                 </svg>
               </div>
-              <h6 className='font-semibold leading-5'>This is about justice</h6>
+              <h6 className='font-semibold leading-5'>Livestock</h6>
             </div>
             <p className='mb-2 text-sm text-gray-900'>
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem

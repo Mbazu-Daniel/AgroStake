@@ -19,13 +19,15 @@ const InvestmentPlan = ({ icon, iconColor, onClick, plan, duration, desc }) => {
       </div>
 
       {/* This h6 displays the name of the investment plan */}
-      <h6 className='mb-2 text-2xl font-extrabold'>{plan}</h6>
+      <h6 className='mb-2 sm:text-2xl text-lg font-extrabold'>{plan}</h6>
 
       {/* This h6 displays the duration of the investment plan */}
       <h6 className='mb-2 text-2xl font-normal'>{duration}</h6>
 
       {/* This p displays the description of the investment plan */}
-      <p className='max-w-md mb-3 text-sm text-gray-900 sm:mx-auto'>{desc}</p>
+      <p className='max-w-md mb-3 text-sm text-gray-900 sm:mx-auto md:flex hidden'>
+        {desc}
+      </p>
 
       {/* This p is a clickable text that fires a function passed as a prop */}
       <p

@@ -257,7 +257,7 @@ const Home = () => {
       </div>
       <Header />
 
-      <Featured />
+      {/* <Featured /> */}
       <HeroBanner />
 
       <div
@@ -288,7 +288,7 @@ const Home = () => {
             iconColor={'text-[#ecbe07]'}
             plan='GOLD'
             duration='180 DAYS'
-            desc='Ready for a big investment payoff? Invest for 365 days and earn a whopping 12% interest - the ultimate choice for those who want to maximize their returns and reach their financial goals faster'
+            desc='Ready for a big investment payoff? Invest for 180 days and earn a whopping 6% interest - the ultimate choice for those who want to maximize their returns and reach their financial goals faster'
             onClick={() => investButton(180, '6%')}
           />
           <InvestmentPlan
@@ -296,7 +296,7 @@ const Home = () => {
             iconColor={'text-[#b9f2ff]'}
             plan='DIAMOND'
             duration='365 DAYS'
-            desc='Ready for a big investment payoff? Invest for 365 days and earn a whopping 12% interest - the ultimate choice for those who want to maximize their returns and reach their financial goals faster'
+            desc='Biggest investment payoff!!! Invest for 365 days and gain an amazing 10% interest - the ultimate choice for Legends'
             onClick={() => investButton(365, '10%')}
           />
         </div>
