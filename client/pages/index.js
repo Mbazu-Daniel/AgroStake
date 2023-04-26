@@ -271,7 +271,7 @@ const Home = () => {
             iconColor={'text-[#CD7F32]'}
             plan='BRONZE'
             duration='60 DAYS'
-            desc='This plan offers a lower APY and a shorter duration, which is perfect for users who want to test the waters before committing to a longer-term plan. The staking amount is also flexible, making it accessible to a wider range of investors.'
+            desc='This plan offers a lower APY and a shorter duration, which is perfect for users who want to test the waters before committing to a longer-term plan.'
             onClick={() => investButton(60, '2%')}
           />
 
@@ -280,7 +280,7 @@ const Home = () => {
             iconColor={'text-[#C0C0C0]'}
             plan='SILVER'
             duration='90 DAYS'
-            desc='Looking for a long-term investment strategy? Invest for 180 days and earn 4.5% interest - a smart choice for those seeking stability and substantial returns.'
+            desc='Looking for a long-term investment strategy? Invest for 90 days and earn 4.5% interest - a smart choice for those seeking stability and substantial returns.'
             onClick={() => investButton(90, '4.5%')}
           />
           <InvestmentPlan
