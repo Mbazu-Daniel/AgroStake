@@ -1,6 +1,6 @@
 // Importing necessary icons from react-icons
 import { MdGrass } from 'react-icons/md'
-import { FaSeedling } from 'react-icons/fa'
+import { FaStar } from 'react-icons/fa'
 import { GiFruitTree } from 'react-icons/gi'
 
 // Declaring a functional component named InvestmentTable, which accepts props 'investments' and 'withdrawInvestment'
@@ -22,6 +22,7 @@ const InvestmentTable = ({ investments, withdrawInvestment }) => {
                 <thead>
                   <tr className='bg-gray-200 text-gray-600 uppercase text-sm leading-normal'>
                     <th className='py-3 px-2 text-left'>Plan</th>
+                    <th className='py-3 px-2 text-left'>Category</th>
                     <th className='py-3 px-2 text-left'>Amount</th>
                     <th className='py-3 px-2 text-center'>Current Interest</th>
                     <th className='py-3 px-2 text-center'>Days Left</th>
@@ -42,15 +43,26 @@ const InvestmentTable = ({ investments, withdrawInvestment }) => {
                             <div className='mr-2'>
                               {' '}
                               {user.interestRate === 2 && (
-                                <FaSeedling color='#008000' />
+                                <FaStar color='#CD7F32' />
                               )}
-                              {user.interestRate === 5 && (
-                                <MdGrass color='#008000' />
+                              {user.interestRate === 4.5 && (
+                                <FaStar color='#C0C0C0' />
                               )}
-                              {user.interestRate === 12 && (
-                                <GiFruitTree color='#008000' />
+                              {user.interestRate === 6 && (
+                                <FaStar color='#ecbe07' />
+                              )}
+                              {user.interestRate === 10 && (
+                                <FaStar color='#b9f2ff' />
                               )}
                             </div>
+                          </div>
+                        </td>
+                        {/* Displaying the Categories */}
+                        <td className='py-3 px-6 text-left'>
+                          <div className='flex items-center'>
+                            <span className='capitalize '>
+                              {user.investCategory}
+                            </span>
                           </div>
                         </td>
                         {/* Displaying the amount of ether staked */}

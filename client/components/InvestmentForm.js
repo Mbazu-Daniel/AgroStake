@@ -1,6 +1,6 @@
 import { MdGrass } from 'react-icons/md' // Importing a specific icon from react-icons/md library.
 import { FaSeedling } from 'react-icons/fa' // Importing a specific icon from react-icons/fa library.
-import { GiFruitTree } from 'react-icons/gi' // Importing a specific icon from react-icons/gi library.
+import { AiOutlineDown } from 'react-icons/ai' // Importing a specific icon from react-icons/gi library.
 
 const InvestmentForm = ({
   onClose,
@@ -42,21 +42,27 @@ const InvestmentForm = ({
                 and watch your money grow!
               </p>{' '}
               <input
-                className='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
+                className='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white mb-2 focus:border-gray-500'
                 id='grid-zip'
                 type='text'
+                required
                 placeholder='0.1'
                 onChange={(e) => setAmount(e.target.value)} // Call the setAmount function when the input value changes.
               />
               <select
-                id='category'
+                className='my-6 block appearance-none w-full pl-3 pr-8 border border-gray-300 rounded-md shadow-sm leading-5 py-3 px-4 focus:outline-none focus:bg-white focus:border-gray-500'
+                id='category text-center'
                 onChange={(e) => setCategory(e.target.value)}
+                required
               >
-                <option>Choose a Category</option>
+                <option disabled selected hidden>
+                  Choose a Category ↓
+                </option>
                 <option value={'fishery'}>Fishery</option>
                 <option value={'livestock'}>Livestock</option>
                 <option value={'crops'}>Crops</option>
               </select>
+              <div className='absolute right-0 top-0 bottom-0 flex items-center px-2 pointer-events-none'></div>
             </div>
           </div>
           <div className='text-center mt-4 md:flex md:justify-center'>

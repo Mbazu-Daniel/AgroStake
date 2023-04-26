@@ -17,7 +17,7 @@ import { useEffect, useState } from 'react'
 
 // Importing necessary icons from react-icons
 import { GiFruitTree } from 'react-icons/gi'
-import { FaSeedling } from 'react-icons/fa'
+import { FaStar } from 'react-icons/fa'
 import { MdGrass } from 'react-icons/md'
 
 // Importing ethers library for interacting with the Ethereum blockchain
@@ -261,32 +261,36 @@ const Home = () => {
 
       <div className='px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20'>
         <InvestmentHeader />
-        <div className='grid gap-8 row-gap-0 grid-cols-3'>
+        <div className='grid gap-4 row-gap-0 grid-cols-4'>
           <InvestmentPlan
-            icon={FaSeedling}
+            icon={FaStar}
+            iconColor={'text-[#CD7F32]'}
             plan='BRONZE'
             duration='60 DAYS'
-            desc='Invest for 90 days and earn 2% interest - the perfect short-term plan for quick and steady growth.'
+            desc='This plan offers a lower APY and a shorter duration, which is perfect for users who want to test the waters before committing to a longer-term plan. The staking amount is also flexible, making it accessible to a wider range of investors.'
             onClick={() => investButton(60, '2%')}
           />
 
           <InvestmentPlan
-            icon={MdGrass}
+            icon={FaStar}
+            iconColor={'text-[#C0C0C0]'}
             plan='SILVER'
             duration='90 DAYS'
             desc='Looking for a long-term investment strategy? Invest for 180 days and earn 4.5% interest - a smart choice for those seeking stability and substantial returns.'
             onClick={() => investButton(90, '4.5%')}
           />
           <InvestmentPlan
-            icon={GiFruitTree}
+            icon={FaStar}
+            iconColor={'text-[#ecbe07]'}
             plan='GOLD'
             duration='180 DAYS'
             desc='Ready for a big investment payoff? Invest for 365 days and earn a whopping 12% interest - the ultimate choice for those who want to maximize their returns and reach their financial goals faster'
             onClick={() => investButton(180, '6%')}
           />
           <InvestmentPlan
-            icon={GiFruitTree}
-            plan='HARVEST'
+            icon={FaStar}
+            iconColor={'text-[#b9f2ff]'}
+            plan='DIAMOND'
             duration='365 DAYS'
             desc='Ready for a big investment payoff? Invest for 365 days and earn a whopping 12% interest - the ultimate choice for those who want to maximize their returns and reach their financial goals faster'
             onClick={() => investButton(365, '10%')}

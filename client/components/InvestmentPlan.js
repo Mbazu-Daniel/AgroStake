@@ -1,5 +1,5 @@
 // This is a functional component named InvestmentPlan that receives props.
-const InvestmentPlan = ({ icon, onClick, plan, duration, desc }) => {
+const InvestmentPlan = ({ icon, iconColor, onClick, plan, duration, desc }) => {
   // This line creates a new constant called Icon and assigns the value of the icon prop to it.
   const Icon = icon
 
@@ -14,7 +14,7 @@ const InvestmentPlan = ({ icon, onClick, plan, duration, desc }) => {
           viewBox='0 0 52 52'
         >
           {/* This line renders the icon passed as a prop */}
-          <Icon size={50} className='text-[#008000]' />
+          <Icon size={50} className={iconColor} />
         </svg>
       </div>
 
