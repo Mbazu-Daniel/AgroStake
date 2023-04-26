@@ -1,8 +1,10 @@
 // Importing the necessary dependencies from React and Next.js
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 import { CgMenuGridR } from 'react-icons/cg'
 import { AiOutlineClose } from 'react-icons/ai'
+import logo from '../public/agrovest.png'
 
 // This component renders individual items in the navigation bar
 const NavBarItem = ({ title, classprops, link }) => (
@@ -31,9 +33,10 @@ export const Navbar = (props) => {
           title='LOGIC'
           className='inline-flex items-center'
         >
-          <span className='ml-2 text-xl font-bold tracking-wide uppercase'>
+          <Image src={logo} width={100} height={100} />
+          {/* <span className='ml-2 text-xl font-bold tracking-wide uppercase'>
             FarmFund
-          </span>
+          </span> */}
         </Link>
         {/* Creating the navigation items */}
         <ul className='flex items-center hidden space-x-8 lg:flex'>

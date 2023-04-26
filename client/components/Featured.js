@@ -1,6 +1,6 @@
-import Link from 'next/link'
+import { FaStar } from 'react-icons/fa'
 
-const Featured = ({ icon, title, description }) => {
+const Featured = () => {
   return (
     <div className='px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 lg:flex hidden'>
       <div className='grid gap-8 row-gap-5 lg:grid-cols-3'>
@@ -26,7 +26,7 @@ const Featured = ({ icon, title, description }) => {
                   />
                 </svg>
               </div>
-              <h6 className='font-semibold leading-5'>The quick, brown fox</h6>
+              <h6 className='font-semibold leading-5'>Crop Farming</h6>
             </div>
             <p className='mb-2 text-sm text-gray-900'>
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -56,19 +56,12 @@ const Featured = ({ icon, title, description }) => {
                   />
                 </svg>
               </div>
-              <h6 className='font-semibold leading-5'>Smooth as an android</h6>
+              <h6 className='font-semibold leading-5'>Fishery</h6>
             </div>
             <p className='mb-2 text-sm text-gray-900'>
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque rem aperiam.
             </p>
-            <Link
-              href='/'
-              aria-label=''
-              className='inline-flex items-center text-sm font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800'
-            >
-              Learn more
-            </Link>
           </div>
         </div>
         <div className='relative p-px overflow-hidden transition duration-300 transform border rounded shadow-sm hover:scale-105 group hover:shadow-xl'>
@@ -99,13 +92,6 @@ const Featured = ({ icon, title, description }) => {
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque rem aperiam.
             </p>
-            <Link
-              href='/'
-              aria-label=''
-              className='inline-flex items-center text-sm font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800'
-            >
-              Learn more
-            </Link>
           </div>
         </div>
       </div>

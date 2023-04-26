@@ -21,7 +21,7 @@ const HeroBanner = () => {
     },
     {
       image: 'https://source.unsplash.com/1600x900/?farm',
-      title: 'Buy Farm',
+      title: 'Crop Farming',
       description:
         'Help us create a more inclusive financial system with our blockchain-powered microlending platform for underserved communities!',
     },
@@ -54,7 +54,7 @@ const HeroBanner = () => {
                 {items[currentIndex].description}
               </p>
               <Link
-                href='/'
+                href='#investment'
                 aria-label=''
                 className='inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-white hover:text-teal-accent-700'
               >
